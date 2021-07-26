@@ -50,7 +50,7 @@ def main():
 
         # still using X_val and y_val since this process can
         # be included in the tuning of the model hyperparameters
-        # which in this case is are the kernels
+        # which in this case are the kernels
         accu = test_svms(svms, X_val, y_val, verbose=False)
         print(f"Accuracy of 8 SVMs (one for each channel): {accu}")
         accus.append([kernel_type, accu])
