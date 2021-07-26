@@ -17,7 +17,9 @@ In particular the SVM is implemented with kernel functions, and the fitting algo
 [Sequential Minimal Optimization](https://www.microsoft.com/en-us/research/publication/sequential-minimal-optimization-a-fast-algorithm-for-training-support-vector-machines/)
 by John Platt that optimizes the Lagrangian which arises from the maximization of the margin in SVMs.  
 The project proposes the usage of such classifier to distinguish between state of ease and state of motor imagery
-activity from a personal dataset.
+activity from a personal dataset.  
+This particular implementation takes in account also the usage of Gram Matrices to 
+speed up computation, and it avoids calls to the kernel function.
 
 ## Prerequisites
 
