@@ -40,9 +40,10 @@ pip install pipenv
 git clone https://github.com/CrisSherban/KerSmoSVM
 ```
 
-2. Install Python dependencies
+2. Enter in the project directory and install Python dependencies
 
 ```sh
+cd KerSmoSVM
 pipenv install
 ```
 
