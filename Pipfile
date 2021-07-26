@@ -1,0 +1,7 @@
+[packages]
+numpy = "*"
+matplotlib = "*"
+numexpr = "*"
+pandas = "*"
+brainflow = "*"
+scipy = "*"
