@@ -37,7 +37,7 @@ pip install pipenv
 1. Clone the repo
 
 ```sh
-git clone https://gitlab.com/CrisSherban/KerSmoSVM
+git clone https://github.com/CrisSherban/KerSmoSVM
 ```
 
 2. Install Python dependencies
