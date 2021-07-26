@@ -190,6 +190,7 @@ def standardize(data, std_type="channel_wise"):
 
 
 def eeg_plotter(sample, label):
+    print("Close the figure to continue")
     [plt.plot(electrode) for electrode in sample]
     plt.legend([f"channel {i + 1}" for i in range(len(sample))])
     plt.title(f"Action: {ACTION_DECODER[label]}\n"
@@ -197,12 +198,9 @@ def eeg_plotter(sample, label):
               f"Min: {np.min(sample):.1F},"
               f"Max: {np.max(sample):.1F},"
               f"Mean: {np.mean(sample):.1F}")
-    plt.savefig('pictures/eeg_sample.png')
+    # plt.savefig('pictures/eeg_sample.png')
     plt.tight_layout()
     plt.show()
-    print("Figure will show for 5 seconds")
-    time.sleep(5)
-    plt.close()
 
 
 def butter_bandpass(lowcut, highcut, fs, order=5):

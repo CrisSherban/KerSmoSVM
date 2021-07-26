@@ -55,14 +55,12 @@ def main():
         print(f"Accuracy of 8 SVMs (one for each channel): {accu}")
         accus.append([kernel_type, accu])
 
+    print("Close the figure to continue")
     bars = pd.DataFrame(accus, columns=['Kernel', 'Accuracy'])
     bars.plot(x='Kernel', y=['Accuracy'], kind="bar")
     plt.tight_layout()
-    plt.savefig('pictures/kernel_comparison.png')
+    # plt.savefig('pictures/kernel_comparison.png')
     plt.show()
-    print("Figure will show for 5 seconds")
-    time.sleep(5)
-    plt.close()
 
 
 if __name__ == '__main__':
