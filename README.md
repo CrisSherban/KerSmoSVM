@@ -55,10 +55,10 @@ Here's a brief description of the .py files:
 
 * ```kernel.py```: Class that represents a kernel, thus provides a kernel function
 * ```svm.py```: SVM class, provides fit() and predict() methods.
-* ```main.py```: Verifies the SVM class works, loads the dataset and shows the result with various kernels.
+* ```main.py```: Verifies that the SVM class works, loads the dataset and shows the result with various kernels.
 * ```test_svm.py```: Contains a simple unit test on the SVM class by fitting and predicting over the MNIST dataset.
-* ```tool.dataset_tools.py```: Provides the loading, preprocessing, and splitting of the personal EEG dataset.
-* ```tool.validation_tools.py```: Provides functions to predict using several SVMs, and cross validate.
+* ```tools.dataset_tools.py```: Provides the loading, preprocessing, and splitting of the personal EEG dataset.
+* ```tools.validation_tools.py```: Provides functions to predict using several SVMs, and cross validate.
 
 To run the ```main.py``` script just run from the project directory:
 
