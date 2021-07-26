@@ -4,6 +4,7 @@ from matplotlib import pyplot as plt
 from scipy.fft import fft
 
 import numpy as np
+import time
 import os
 
 ACTIONS = ["none", "hands"]
@@ -199,6 +200,9 @@ def eeg_plotter(sample, label):
     plt.savefig('pictures/eeg_sample.png')
     plt.tight_layout()
     plt.show()
+    print("Figure will show for 5 seconds")
+    time.sleep(5)
+    plt.close()
 
 
 def butter_bandpass(lowcut, highcut, fs, order=5):

@@ -1,3 +1,4 @@
+import time
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -47,6 +48,9 @@ def main():
         for svm_num in list(svms.keys()):
             svms[svm_num].fit(np.array(X_train[:, svm_num, :]), np.array(y_train))
 
+        # still using X_val and y_val since this process can
+        # be included in the tuning of the model hyperparameters
+        # which in this case is are the kernels
         accu = test_svms(svms, X_val, y_val, verbose=False)
         print(f"Accuracy of 8 SVMs (one for each channel): {accu}")
         accus.append([kernel_type, accu])
@@ -56,6 +60,9 @@ def main():
     plt.tight_layout()
     plt.savefig('pictures/kernel_comparison.png')
     plt.show()
+    print("Figure will show for 5 seconds")
+    time.sleep(5)
+    plt.close()
 
 
 if __name__ == '__main__':
