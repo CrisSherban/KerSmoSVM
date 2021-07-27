@@ -169,6 +169,7 @@ class SVM:
                 j = self.rnd_in_range(0, num_samples, i)
                 error_j = self.__pred_error(y[j], j)
 
+                # this represents the second order derivative of the objective function
                 ker_ij = self.gram_matrix[i, i] + self.gram_matrix[j, j] - 2 * self.gram_matrix[i, j]
                 if ker_ij == 0:  # because of division by 0 we counteract by trying another j
                     continue
