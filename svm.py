@@ -75,7 +75,7 @@ class SVM:
             rnd.seed(a=self.seed)
         if re.search(r"\'.*\'", str(self.kernel)).group(0) == "'poly'":
             # high Cs take a lot for poly kernel, setting it down for
-            # faster computation, remove this line if you are cross validation
+            # faster computation, remove this line if you are cross validating
             self.C = 1
 
     def __str__(self) -> str:
