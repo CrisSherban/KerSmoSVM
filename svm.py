@@ -238,4 +238,4 @@ class SVM:
         :param y_true: 1-D array-like of true y
         :return: accuracy
         """
-        return sum([1 for i in range(len(y_true)) if y_true[i] == y_pred[i]]) / len(y_true)
+        return np.sum(np.array(y_pred) == np.array(y_true)) / len(y_true)
